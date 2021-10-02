@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ecicotoste/exemplo-1#readme",
   "dependencies": {
     "next": "^11.1.2",
+    "node-localstorage": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
