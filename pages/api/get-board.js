@@ -35,8 +35,10 @@ function MyBoard(request, response) {
     if(novaPlaca == ''){
         for (var i = 0; i < listPlacas.length; i++){
             if(listPlacas[i][2] == 9){
+                var dataAtual = new Date(); 
                 novaPlaca = listPlacas[i][0];
                 listPlacas[i][2] = 0;
+                listPlacas[i][1] = dataAtual;
                 localStorage.setItem('histPlaca', JSON.stringify(listPlacas));
                 break;
             }
