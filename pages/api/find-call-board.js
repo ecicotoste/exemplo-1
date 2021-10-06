@@ -1,7 +1,7 @@
 import { LocalStorage } from "node-localstorage";
 global.localStorage = new LocalStorage('./scratch');
 
-function CancelCallBoard(request, response) {
+function FindCallBoard(request, response) {
     var parametro = request.url.split('?');
     var param1 = '';
     var param2 = '';
@@ -18,9 +18,9 @@ function CancelCallBoard(request, response) {
     const listPlacas = JSON.parse(hist_placa); 
  
     for (var i = 0; i < listPlacas.length; i++){
-        if(param2 == listPlacas[i][0] && listPlacas[i][2] == 1){
+        if(param2 == listPlacas[i][0] && (listPlacas[i][2] == 1 || listPlacas[i][2] == 2)){
             placa = listPlacas[i][0];
-            listPlacas[i][2] = 9;
+            listPlacas[i][2] = 2;
             localStorage.setItem('histPlaca', JSON.stringify(listPlacas));
             break;
         }
@@ -29,4 +29,4 @@ function CancelCallBoard(request, response) {
     response.json(placa);  
 }
 
-export default CancelCallBoard;
+export default FindCallBoard;
