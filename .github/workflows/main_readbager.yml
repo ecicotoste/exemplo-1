@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'readbager'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8BBBC479B93D4AEBA61BF601F0F25A88 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B5FED396B9444919BCCC54C285D67D22 }}
           package: .
